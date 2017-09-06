@@ -57,12 +57,13 @@
 
 import React from 'react';
 import { AppRegistry, Text } from 'react-native';
+import Header from './src/components/header';
 
 
 // TODO: Create a component
 
 const App = () => (
-  <Text>Some text</Text>
+  <Header />
 );
 
 
