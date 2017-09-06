@@ -5,6 +5,13 @@ import { View, Text } from 'react-native';
 
 // Make a component
 class AlbumList extends Component {
+  componentWillMount() {
+    // I CAN USE CHROME TO DEBUG THE APP
+    // console.log('componentWillMount in AlbumList');
+    // debugger;
+  }
+
+
   render() {
     return (
       <View>
