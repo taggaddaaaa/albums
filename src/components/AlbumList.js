@@ -1,7 +1,8 @@
 // Import libraries for making a component
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail'
 
 
 // Make a component
@@ -11,22 +12,24 @@ class AlbumList extends Component {
   };
 
   componentWillMount() {
-    // I CAN USE CHROME TO DEBUG THE APP
-    // console.log('componentWillMount in AlbumList');
-    // debugger;
     fetch('https://rallycoding.herokuapp.com/api/music_albums')
       .then((response) => response.json())
       .then((responseData) => this.setState({ albums: responseData }));
   }
 
+  // Create a method to render each albums
+  // Do not forget to give a key to each child of albums
+  renderAlbums() {
+    return this.state.albums.map(album =>
+        <AlbumDetail key={album.title} album={album} />
+    );
+  }
 
   render() {
-    console.log('state of albumList : ', this.state);
+    //console.log('state of albumList : ', this.state);
     return (
       <View>
-        <Text>
-          Album List !!!
-        </Text>
+          {this.renderAlbums()}
       </View>
     );
   }
