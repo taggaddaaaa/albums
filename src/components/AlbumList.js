@@ -6,7 +6,7 @@ import axios from 'axios';
 
 // Make a component
 class AlbumList extends Component {
-  state= { 
+  state = {
     albums: [] 
   };
 
@@ -17,9 +17,7 @@ class AlbumList extends Component {
     fetch('https://rallycoding.herokuapp.com/api/music_albums')
       .then((response) => response.json())
       .then((responseData) => this.setState({ albums: responseData }));
-    console.log('objet that is returned by fetch method: ', this);
-
-}
+  }
 
 
   render() {
