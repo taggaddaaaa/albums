@@ -1,14 +1,16 @@
-# albums
-Albums is a simple project code in React Native to test my skills on it.
+# albums #
 ---
-#### Do not forget : ###
+Albums is a simple project code in React Native to test my skills on it.
+I fetch a collection of albums of Taylor Swift and display the information ans images on different cards. You can scroll on the screen and if you want to buy one it links you to Amazon web site.
 
-I can use Chrome to debug the app. 
+Simply as that !
 
-In simulator COM + D and : 
+#### How does it works ? ###
+run ``npm install``
+then 
+``react-native run-ios``
+to see the result in the iOS simulator
 
-``console.log('componentWillMount in AlbumList');``
- 
- or
-  
-``debugger;``
+or 
+``react-native run-android``
+to see the result in the android simulator
