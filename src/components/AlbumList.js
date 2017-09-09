@@ -5,7 +5,6 @@ import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
 
-
 // Make a component
 class AlbumList extends Component {
   state = {
@@ -22,7 +21,7 @@ class AlbumList extends Component {
   // Do not forget to give a key to each child of albums
   renderAlbums() {
     return this.state.albums.map(album =>
-        <AlbumDetail key={album.title} album={album} />
+      <AlbumDetail key={album.title} album={album} />
     );
   }
 
@@ -30,7 +29,7 @@ class AlbumList extends Component {
     //console.log('state of albumList : ', this.state);
     return (
       <ScrollView>
-          {this.renderAlbums()}
+        {this.renderAlbums()}
       </ScrollView>
     );
   }

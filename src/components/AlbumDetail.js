@@ -7,64 +7,64 @@ import CardSection from './CardSection';
 
 // Make a component
 const AlbumDetail = ({ album }) => {
-    //if we call several times the same object we can refacto like this:
-    const {title, artist, thumbnail_image, image} = album;
+  //if we call several times the same object we can refacto like this:
+  const {title, artist, thumbnail_image, image} = album;
 
-    const {
-        thumbnailStyle,
-        headerContentStyle,
-        thumbnailContainerStyle,
-        headerTextStyle,
-        imageStyle
-    } = styles;
+  const {
+    thumbnailStyle,
+    headerContentStyle,
+    thumbnailContainerStyle,
+    headerTextStyle,
+    imageStyle
+  } = styles;
 
-    return (
-        <Card>
-            <CardSection>
-                <View style={thumbnailContainerStyle}>
-                    <Image
-                        style={thumbnailStyle}
-                        source={{ uri: thumbnail_image }}
-                    />
-                </View>
-                <View style={headerContentStyle}>
-                    <Text style={headerTextStyle}>{title}</Text>
-                    <Text>{artist}</Text>
-                </View>
-            </CardSection>
-            <CardSection>
-                <Image
-                    style={imageStyle}
-                    source={{ uri: image }}
-                />
-            </CardSection>
-        </Card>
-    );
+  return (
+    <Card>
+      <CardSection>
+        <View style={thumbnailContainerStyle}>
+          <Image
+            style={thumbnailStyle}
+            source={{ uri: thumbnail_image }}
+          />
+        </View>
+        <View style={headerContentStyle}>
+          <Text style={headerTextStyle}>{title}</Text>
+          <Text>{artist}</Text>
+        </View>
+      </CardSection>
+      <CardSection>
+        <Image
+          style={imageStyle}
+          source={{ uri: image }}
+        />
+      </CardSection>
+    </Card>
+  );
 };
 
 const styles = {
-    headerContentStyle: {
-        flexDirection: 'column',
-        justifyContent: 'space-around'
-    },
-    headerTextStyle: {
-        fontSize: 18
-    },
-    thumbnailStyle: {
-        height: 50,
-        width: 50
-    },
-    thumbnailContainerStyle: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginLeft: 10,
-        marginRight: 10
-    },
-    imageStyle: {
-        height: 300,
-        flex: 1,
-        width: null
-    }
+  headerContentStyle: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
+  },
+  headerTextStyle: {
+    fontSize: 18
+  },
+  thumbnailStyle: {
+    height: 50,
+    width: 50
+  },
+  thumbnailContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 10
+  },
+  imageStyle: {
+    height: 300,
+    flex: 1,
+    width: null
+  }
 };
 
 
