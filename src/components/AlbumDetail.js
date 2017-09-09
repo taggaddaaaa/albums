@@ -1,6 +1,6 @@
 // Import libraries for making a component
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
@@ -9,7 +9,7 @@ import Button from './Button';
 // Make a component
 const AlbumDetail = ({ album }) => {
   //if we call several times the same object we can refacto like this:
-  const {title, artist, thumbnail_image, image} = album;
+  const {title, artist, thumbnail_image, image, url} = album;
 
   const {
     thumbnailStyle,
@@ -40,7 +40,7 @@ const AlbumDetail = ({ album }) => {
         />
       </CardSection>
       <CardSection>
-        <Button onPress={() => console.log(title)} />
+        <Button onPress={() => Linking.openURL(url)} />
       </CardSection>
     </Card>
   );
